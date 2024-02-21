@@ -1,0 +1,44 @@
+import com.rak.requestDTO.PageRequestDTO;
+global com.rak.responseDTO.ApiResponseDTO responseDTO;
+dialect  "mvel" 
+rule "Home"
+    when
+        PageRequestDTO(pageName=="home");
+    then
+        responseDTO.setPageName("brand");
+end
+
+rule "Brand"
+    when
+        PageRequestDTO(pageName=="brand");
+    then
+        responseDTO.setPageName("model");
+end
+
+rule "Model"
+    when
+        PageRequestDTO(pageName=="model");
+    then
+        responseDTO.setPageName("variant");
+end
+
+rule "Variant"
+    when
+        PageRequestDTO(pageName=="variant");
+    then
+        responseDTO.setPageName("regyear");
+end
+
+rule "Registration"
+    when
+        PageRequestDTO(pageName=="regyear");
+    then
+        responseDTO.setPageName("details");
+end
+
+rule "Details"
+    when
+        PageRequestDTO(pageName=="details");
+    then
+        responseDTO.setPageName("Success");
+end
