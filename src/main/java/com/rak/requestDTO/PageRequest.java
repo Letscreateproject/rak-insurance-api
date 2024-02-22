@@ -10,6 +10,6 @@ public class PageRequest {
 	private String brand;
 	private String model;
 	private String variant;
-	private Integer regyear;
+	private String regyear;
 
 }
